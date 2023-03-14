@@ -1,0 +1,16 @@
+body {
+  /* background-color: #3b424f; */
+  background: url("./assets/shiny-overlay.svg");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: cover;
+}
+.title {
+  color: #fcf8ff;
+  font-size: 3rem;
+}
+
+.list-node {
+  display: flex;
+  flex-direction: row;
+}
