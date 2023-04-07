@@ -52,9 +52,20 @@ app.get("/gettodo", (req, res) => {
 app.post("/delete", (req, res) => {
   let idData = req.body;
   let todoId = idData.listId;
-  console.log(todoId);
+  // console.log(todoId);
   con.query(
     `DELETE FROM todolist WHERE todo_id = '${todoId}'`,
+    (err, results, fields) => {
+      if (err) throw err;
+      res.send(results);
+    }
+  );
+});
+
+app.put("/edit/:id/:value", async (req, res) => {
+  const { id, value } = await req.params;
+  con.query(
+    `UPDATE todolist SET list = '${value}' WHERE todo_id = '${id}' `,
     (err, results, fields) => {
       if (err) throw err;
       res.send(results);

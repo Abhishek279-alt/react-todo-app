@@ -39,7 +39,7 @@ function App() {
           <div className="toDoInput">
             <div className="input-group mb-3">
               <span className="input-group-text" id="basic-addon1">
-                Enter To-Do
+                To-Do
               </span>
               <input
                 type="text"
@@ -49,10 +49,10 @@ function App() {
               />
               <button
                 type="submit"
-                className="btn btn-warning"
+                className="btn btn-warning fs-4 fw-bold"
                 onClick={submitToDo}
               >
-                Add
+                +
               </button>
             </div>
           </div>
